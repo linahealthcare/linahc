@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lina Health Care</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/lina-logo.jpg" alt="Pharmacy Logo">
+        </div>
+        <h1>Lina Health Care</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <input type="text" id="search-bar" placeholder="Search for a drug...">
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Description Modal -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="modal-product-name"></h2>
+      <p id="modal-product-description"></p>
+    </div>
+  </div>
+
+  
+  
+    
+   <section class="products" id="product-list">
+        <!-- Products will be dynamically added here -->
+    </section>
+
+    
+
+    <a href="https://wa.me/2348033617281" class="whatsapp-icon" target="_blank">
+        <img src="images/whatsapp.jpg" alt="WhatsApp">
+    </a>
+
+   
+    <footer class="site-footer">
+        <p>&copy; Web designed by Dreyson Global 08161653750. All rights reserved.</p>
+      </footer>
+          
+
+    <script src="script.js"></script>
+    <script>
+        if (sessionStorage.getItem("visitedWelcome")) {
+            window.location.href = "home.html"; 
+        }
+        document.getElementById("enter-site").addEventListener("click", function() {
+            sessionStorage.setItem("visitedWelcome", "true"); 
+            window.location.href = "home.html"; 
+        });
+    </script>
+    
+    
+
+</body>
+</html>
